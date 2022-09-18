@@ -2,7 +2,7 @@
   <div class="row mt-5">
     <div class="col"></div>
     <div class="col-4">
-      <div class="card-shadow">
+      <div class="card shadow">
         <div class="card-body">
 
           <form>
@@ -10,23 +10,28 @@
               <h3 class="text-dark text-muted">Login</h3>
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" name="email" [(ngModel)="email"]>
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" [(ngModel)]="email" >
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <label class="form-label">Password</label>
               <input type="password" class="form-control" name="password" [(ngModel)]="password">
             </div>
             <button type="button" class="btn btn-info" (click)="login()">Login</button>
             <div class="row">
               <div class="col-md-6">
-                <a href="" style="text-decoration: none;"> Haven't Register? <span class="text-danger">Click Here</span></a>
-                <div class="col-md-6">
-                  <a href="" class="text-dark" style="text-decoration: none;">Forget Password ?</a>
-                </div>
+                <a href="/register" style="text-decoration: none;"> No Account?
+                  <span class="text-danger col-md-6">Register</span>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="" class="text-dark" style="text-decoration: none;">Forget Password ?</a>
               </div>
             </div>
           </form>
+
 
         </div>
       </div>
@@ -34,3 +39,7 @@
     <div class="col"></div>
   </div>
 </div>
+
+
+
+
