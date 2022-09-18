@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-firebase-authen-d730e": {
+      "hosting": {
+        "ng-fb-login": [
+          "angular-firebase-authen-d730e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-firebase-authen-d730e"
+  }
+}
