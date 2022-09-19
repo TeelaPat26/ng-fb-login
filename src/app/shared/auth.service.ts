@@ -12,6 +12,15 @@ export class AuthService {
     private router: Router
     ) { }
 
+    // email verification
+    sendVerificationMail(user: any){
+      user.sendEmailVerification().then((res: any) => {
+        this.router.navigate(['/verify-email']);
+      }, (err : any) => {
+        alert('Something went wrong! Cannot send verification')
+      })
+    }
+
     // Login method
     login(email: string, password: string) {
       this.fireauth.signInWithEmailAndPassword(email, password).then( res => {
@@ -33,7 +42,7 @@ export class AuthService {
       this.fireauth.createUserWithEmailAndPassword(email, password).then( res => {
         alert('Register successful');
         this.router.navigate(['/login']);
-        this.sendEmailForVerify(res.user);
+        this.sendVerificationMail(res.user);
       }, err => {
         alert(err.message);
         this.router.navigate(['/register'])
@@ -60,12 +69,5 @@ export class AuthService {
       )
     }
 
-    // email verification
-    sendEmailForVerify(user: any){
-      user.sendEmailForVerify().then((res: any) => {
-        this.router.navigate(['/verify-email']);
-      }, (err : any) => {
-        alert('Something went wrong! Cannot send verification')
-      })
-    }
+
 }

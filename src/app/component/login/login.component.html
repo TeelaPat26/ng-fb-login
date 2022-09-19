@@ -11,7 +11,7 @@
             </div>
             <div class="mb-3">
               <label class="form-label">Email</label>
-              <input type="email" class="form-control" name="email" [(ngModel)]="email" >
+              <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="test@example.com" >
             </div>
             <div class="mb-3">
               <label class="form-label">Password</label>
@@ -20,8 +20,8 @@
             <button type="button" class="btn btn-info" (click)="login()">Login</button>
             <div class="row">
               <div class="col-md-6">
-                <a href="/register" style="text-decoration: none;"> No Account?
-                  <span class="text-danger col-md-6">Register</span>
+                <a href="/register" style="text-decoration: none;" class="text-danger"> No Account?
+                  <span class="text-primary col-md-6">Click Here</span>
                 </a>
               </div>
             </div>
